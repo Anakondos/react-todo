@@ -16,11 +16,15 @@ const AddTodoForm = ({onAddTodo}) => {
     const handleAddTodo = (event) => {
         event.preventDefault();
         // const todoTitle = event.target.title.value;
-        onAddTodo(todoTitle);
+        onAddTodo({
+            title: todoTitle,
+            id: Date.now(),
+        });
 
         // console.log('This is  todoTitle = ', todoTitle);
         
-        event.target.reset();
+        // event.target.reset();
+        setTodoTitle("");
     }
 
 
