@@ -5,18 +5,11 @@ import AddTodoForm from './AddTodoForm';
 
 function App() {
 
- 
-    // const [newTodo, setNewTodo] = React.useState('');
- 
-  
-    /*1.4 new state variable named todoList 
-    with setter setTodoList and default value of an empty Array*/
+ //   create state for App with blank Array and 'todoList' variable and setter 'setTodoList'
     const [todoList, setTodoList] = React.useState([]);
     
-    // const handleSearch = (event) => {
-    //   setTodoList(event.target.value);
-    // }
-    
+  
+ //   update STATE function 
     const addTodo = (newTodo) => {
 
         setTodoList([...todoList, newTodo]);
@@ -26,7 +19,7 @@ function App() {
     <div>
       <h1>Todo list</h1>
       <AddTodoForm onAddTodo={addTodo}/>
-        {/* <p>Value of NewTodo = {newTodo}</p> */}
+        
       <TodoList todoList={todoList} />
     </div>
   );

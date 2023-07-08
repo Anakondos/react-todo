@@ -1,29 +1,28 @@
 import React from 'react';
 
 
-const AddTodoForm = ({onAddTodo}) => {
+function AddTodoForm ({onAddTodo}) {
     
+    //  create STATE for AddTodoForm component
     const [todoTitle, setTodoTitle] = React.useState('');
 
+    //  create func to udate STATE in AddTodoForm component
     const handleTitleChange = (event) => {
 
-        const newTodoTitle = event.target.value;
-        
-        setTodoTitle(newTodoTitle);
+            const newTodoTitle = event.target.value;
+            setTodoTitle(newTodoTitle);
     }
     
-    
+    //  create CallBack for addTodo function to add new items in App() STATE
     const handleAddTodo = (event) => {
         event.preventDefault();
-        // const todoTitle = event.target.title.value;
+
         onAddTodo({
             title: todoTitle,
             id: Date.now(),
         });
-
-        // console.log('This is  todoTitle = ', todoTitle);
         
-        // event.target.reset();
+        // Set state varable to empty (clean input field)
         setTodoTitle("");
     }
 
