@@ -30,12 +30,12 @@ function App() {
     } 
 
   return (
-    <div>
+    <>
       <h1>Todo list</h1>
       <AddTodoForm onAddTodo={addTodo}/>
         
       <TodoList todoList={todoList} />
-    </div>
+    </>
   );
 }
 
