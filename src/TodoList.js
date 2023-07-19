@@ -6,12 +6,14 @@ import TodoListItem from './TodoListItem';
 
 function TodoList ({todoList}) {
  
-  const {id, title} = todoList;
+  
 
   return (
     <ul>   
       {todoList.map(function(item){
-        return (<TodoListItem key={id} item={item} />);
+        const {id, title} = item;
+        console.log(id,title)
+        return (<TodoListItem key={item.id} item={item} />);
       })}
     </ul>
   );
