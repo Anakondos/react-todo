@@ -35,9 +35,10 @@ function AddTodoForm ({onAddTodo}) {
                name="title" 
                 value={todoTitle} 
                 onChange={handleTitleChange}
-                label = "Title"
-            />
-            <button >Add</button>
+            > 
+            Title
+            </InputWithLabel>
+            <button>Add</button>
         </form>
     );
 } 
