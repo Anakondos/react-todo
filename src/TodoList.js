@@ -4,7 +4,7 @@ import TodoListItem from './TodoListItem';
 
 
 
-function TodoList ({todoList}) {
+function TodoList ({todoList, onRemoveTodo}) {
  
   
 
@@ -13,7 +13,7 @@ function TodoList ({todoList}) {
       {todoList.map(function(item){
         const {id, title} = item;
         console.log(id,title)
-        return (<TodoListItem key={item.id} item={item} />);
+        return (<TodoListItem key={item.id} item={item} onRemoveTodo={onRemoveTodo}/>);
       })}
     </ul>
   );
