@@ -31,11 +31,11 @@ function App() {
     } 
 
     const removeTodo = (id) => {
-      console.log("test",id);
+     
       const newListItem = todoList.filter(
         (TodoListItem) => id !== TodoListItem.id
       );
-         console.log(newListItem);
+         
       setTodoList(newListItem);
     }
 
