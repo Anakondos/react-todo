@@ -11,15 +11,12 @@ function App() {
  const [todoList, setTodoList] = React.useState([]);
  const [isLoading, setIsLoading] = React.useState(true);
 
-    React.useEffect(
+ React.useEffect(
       
-      ()=>{
-        
-        getAsyncTodoList().then((result)=>{
+      ()=>{getAsyncTodoList().then((result)=>{
           setTodoList(result.data.todoList);
           setIsLoading(false);
-        });
-      
+          });
       },[]);
 
     
@@ -30,7 +27,7 @@ function App() {
 
   new Promise((resolve, reject) => 
     setTimeout(
-      () => resolve({data: {todoList: JSON.parse(localStorage.getItem('savedTodoList')) } }), 
+      () => resolve({data: {todoList: JSON.parse(localStorage.getItem('savedTodoList')) || [] } }), 
         2000
         )
     
@@ -64,12 +61,13 @@ function App() {
 
   return (
     <>
-    {isLoading?<p>...isLoading</p>:<p></p>}
+    {isLoading?<p>...isLoading</p>:<p>
     
       <h1>Todo list</h1>
       <AddTodoForm onAddTodo={addTodo}/>
         
       <TodoList todoList={todoList} onRemoveTodo={removeTodo}/>
+      </p>}
     </>
   );
 }
