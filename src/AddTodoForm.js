@@ -22,6 +22,8 @@ function AddTodoForm ({onAddTodo}) {
             title: todoTitle,
             id: Date.now(),
         });
+
+     
         
         // Set state varable to empty (clean input field)
         setTodoTitle("");
