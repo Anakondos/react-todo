@@ -2,6 +2,7 @@ import React from 'react';
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
 
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
 
@@ -143,15 +144,27 @@ const postData = async(newTodo) => {
     }
 
   return (
-    <>
-    {isLoading?<p>...isLoading</p>:<p>
+    <div>
+      <h1>My App</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={
+
+          <div>
+          {isLoading?<p>...isLoading</p>:<div>
+
+
+            <h1>Todo list</h1>
+            <AddTodoForm onAddTodo={addTodo}/>
+              
+            <TodoList todoList={todoList} onRemoveTodo={removeTodo}/></div>}
+            </div>
+        } />
     
-      <h1>Todo list</h1>
-      <AddTodoForm onAddTodo={addTodo}/>
-        
-      <TodoList todoList={todoList} onRemoveTodo={removeTodo}/>
-      </p>}
-    </>
+      <Route path="/new" element={<h1>New Todo List</h1>} />
+     </Routes>
+    </BrowserRouter>
+    </div>
   );
 }
 
