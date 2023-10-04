@@ -8,9 +8,9 @@ const handleRemoveTodo = () =>{
 }
 
     return (
-        <li className='styles.ListItem'>
+        <li className={styles.ListItem}>
             {item.title}
-            <button onClick={handleRemoveTodo}>Remove</button>
+            <button onClick={handleRemoveTodo} className={styles.button}>Remove</button>
         </li>
     );
 

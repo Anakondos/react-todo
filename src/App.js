@@ -1,8 +1,8 @@
 import React from 'react';
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
-
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import styles from './TodoListItem.module.css';
 
 function App() {
 
@@ -144,8 +144,9 @@ const postData = async(newTodo) => {
     }
 
   return (
-    <div>
-      <h1>My App</h1>
+    <div className={styles.container}>
+      <h1 className={styles.headlinePrimary}>My App</h1>
+      <h2 className={styles.titleInput}>Test Google font</h2>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={
