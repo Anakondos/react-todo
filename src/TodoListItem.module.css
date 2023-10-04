@@ -1,0 +1,42 @@
+.ListItem {
+    color: cadetblue;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    
+}
+
+.container {
+    height: 100vw;
+    padding: 20px;
+    background: #83a4d4; /* fallback for old browsers */
+    background-color: thistle;
+    background: linear-gradient(to left, #b6fbff, #83a4d4);
+    color: #171212;
+}
+
+.headlinePrimary {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    }
+
+.google {
+    color: crimson;
+    font-family: 'Fuggles', cursive;
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Oswald', sans-serif;
+
+    
+}
+
+.button {
+        background: transparent;
+        border: 1px solid #171212;
+        padding: 5px;
+        cursor: pointer;
+        transition: all 0.1s ease-in;
+        }

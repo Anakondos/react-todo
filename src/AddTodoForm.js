@@ -1,6 +1,6 @@
 import React from 'react';
 import InputWithLabel from './InputWithLabel';
-
+import styles from './TodoListItem.module.css';
 
 function AddTodoForm ({onAddTodo}) {
     
@@ -38,7 +38,7 @@ function AddTodoForm ({onAddTodo}) {
                 value={todoTitle} 
                 onChange={handleTitleChange}
             > 
-            Title
+            <span className={styles.titleInput}>Title</span>
             </InputWithLabel>
             <button>Add</button>
         </form>
