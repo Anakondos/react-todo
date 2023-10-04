@@ -146,7 +146,7 @@ const postData = async(newTodo) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.headlinePrimary}>My App</h1>
-      <h2 className={styles.titleInput}>Test Google font</h2>
+      <h2 className={styles.google}>Test Google font</h2>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={
